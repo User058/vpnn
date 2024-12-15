@@ -39,7 +39,7 @@ echo -e " WELCOME TO USER058 AUTOSCRIPT PREMIUM${YELLOW}(${NC}${green}Stable Edi
 echo -e " CHECKING IP ADDRESS !!"
 echo -e "${purple}----------------------------------------------------------${NC}"
 echo -e " ›AUTHOR : ${green}USER058 ${NC}${YELLOW}(${NC}${green}V 3.2${NC}${YELLOW})${NC}"
-echo -e " ›TEAM : USER058 ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e " ›TEAM : USER058 ${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
