@@ -521,7 +521,7 @@ echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
 #update
-# set time GMT +7
+# set time GMT +3
 ln -fs /usr/share/zoneinfo/Africa/Nairobi /etc/localtime
 
 # set locale
@@ -990,7 +990,7 @@ echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo "   - SLOWDNS                 : 53"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Africa/Nairobi (GMT +7)"  | tee -a log-install.txt
+echo "   - Timezone                : Africa/Nairobi (GMT +3)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
