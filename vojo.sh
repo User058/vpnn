@@ -241,7 +241,7 @@ function base_package() {
 }
 clear
 # Fungsi input domain
-function Installing domain() {
+function pasang_domain() {
 echo -e ""
 clear
     echo -e "   .----------------------------------."
