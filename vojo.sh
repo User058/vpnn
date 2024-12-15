@@ -331,7 +331,7 @@ fi
 }
 clear
 # Installing SSL
-function Installing ssl() {
+function pasang_ssl() {
 clear
 print_install "Install SSL On The Domain"
     rm -rf /etc/xray/xray.key
