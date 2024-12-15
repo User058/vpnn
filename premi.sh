@@ -134,7 +134,7 @@ function is_root() {
 }
 
 # Buat direktori xray
-print_install "Membuat direktori xray"
+print_install "Create Directory xray"
     mkdir -p /etc/xray
     curl -s ifconfig.me > /etc/xray/ipvps
     touch /etc/xray/domain
@@ -210,7 +210,7 @@ function nginx_install() {
 function base_package() {
     clear
     ########
-    print_install "Menginstall Packet Yang Dibutuhkan"
+    print_install "Installing the Required Packages"
     apt install zip pwgen openssl netcat socat cron bash-completion -y
     apt install figlet -y
     apt update -y
@@ -236,7 +236,7 @@ function base_package() {
     echo iptables-persistent iptables-persistent/autosave_v4 boolean true | debconf-set-selections
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | debconf-set-selections
     sudo apt-get install -y speedtest-cli vnstat libnss3-dev libnspr4-dev pkg-config libpam0g-dev libcap-ng-dev libcap-ng-utils libselinux1-dev libcurl4-nss-dev flex bison make libnss3-tools libevent-dev bc rsyslog dos2unix zlib1g-dev libssl-dev libsqlite3-dev sed dirmngr libxml-parser-perl build-essential gcc g++ python htop lsof tar wget curl ruby zip unzip p7zip-full python3-pip libc6 util-linux build-essential msmtp-mta ca-certificates bsd-mailx iptables iptables-persistent netfilter-persistent net-tools openssl ca-certificates gnupg gnupg2 ca-certificates lsb-release gcc shc make cmake git screen socat xz-utils apt-transport-https gnupg1 dnsutils cron bash-completion ntpdate chrony jq openvpn easy-rsa
-    print_success "Packet Yang Dibutuhkan"
+    print_success "Required Packages"
     
 }
 clear
@@ -333,7 +333,7 @@ clear
 # Pasang SSL
 function pasang_ssl() {
 clear
-print_install "Memasang SSL Pada Domain"
+print_install "Installing SSL On Domain"
     rm -rf /etc/xray/xray.key
     rm -rf /etc/xray/xray.crt
     domain=$(cat /root/domain)
@@ -419,7 +419,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     clear
     curl -s ipinfo.io/city >>/etc/xray/city
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >>/etc/xray/isp
-    print_install "Memasang Konfigurasi Packet"
+    print_install "Installing Packet Configuration"
     wget -O /etc/haproxy/haproxy.cfg "${REPO}config/haproxy.cfg" >/dev/null 2>&1
     wget -O /etc/nginx/conf.d/xray.conf "${REPO}config/xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
@@ -453,12 +453,12 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 
 EOF
-print_success "Konfigurasi Packet"
+print_success "Packet Configuration"
 }
 
 function ssh(){
 clear
-print_install "Memasang Password SSH"
+print_install "Installing Password SSH"
     wget -O /etc/pam.d/common-password "${REPO}files/password"
 chmod +x /etc/pam.d/common-password
 
@@ -531,7 +531,7 @@ print_success "Password SSH"
 
 function udp_mini(){
 clear
-print_install "Memasang Service Limit IP & Quota"
+print_install "Installing Service Limit IP & Quota"
 wget -q https://raw.githubusercontent.com/xyoruz/scriptvpn/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
 
 # // Installing UDP Mini
@@ -559,7 +559,7 @@ print_success "Limit IP Service"
 function ssh_slow(){
 clear
 # // Installing UDP Mini
-print_install "Memasang modul SlowDNS Server"
+print_install "Installing module SlowDNS Server"
     wget -q -O /tmp/nameserver "${REPO}files/nameserver" >/dev/null 2>&1
     chmod +x /tmp/nameserver
     bash /tmp/nameserver | tee /root/install.log
