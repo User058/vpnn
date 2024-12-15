@@ -10,6 +10,5 @@
 	"ssl_version": "AUTO",
 	"conn_timeout": 30,
 	"dns_resolver": "/etc/resolv.conf",
-	"http_ok": "HTTP/1.1 101 Switching Protocols[crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]"
+	"http_ok": 'HTTP/1.1 101 (<font color="yellow">userverse</font>)\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n'
 }
-
