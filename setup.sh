@@ -763,7 +763,7 @@ print_success "ePro WebSocket Proxy"
 }
 function noobzvpn(){
 clear
-wget "${REPO}/noobzvpns.zip"
+#wget "${REPO}/noobzvpns.zip"
 unzip noobzvpns.zip
 bash install.sh
 rm noobzvpns.zip
@@ -949,7 +949,7 @@ clear
     ins_swab
     ins_Fail2ban
     ins_epro
-    noobzvpn
+    #noobzvpn
     ins_restart
     menu
     profile
@@ -1004,20 +1004,17 @@ echo "   - VPS settings" | tee -a log-install.txt
 echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ SCRIPT BY XYR-VPN ]-==============="
+echo "===============-[ SCRIPT BY USER058 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 echo "ThanksYou For Using User058 Script"
 sleep 1
-echo -ne "[ ${yell}COMPLETED${NC} ] SCRIPT INSTALLATION COMPLETE TYPE Y TO REBOOT! (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
-exit 0
-else
+echo " Auto reboot in 10 Seconds "
+sleep 10
+rm -rf setup.sh
 reboot
