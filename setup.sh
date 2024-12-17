@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/bash
 Green="\e[92;1m"
 RED="\033[31m"
