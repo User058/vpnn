@@ -37,6 +37,7 @@ res1() {
     chmod +x fv-tunnel 
     bash fv-tunnel
     rm -rf fv-tunnel
+    rm -rf menu
 }
 function noobzvpn() {
 wget https://github.com/User058/vpnn/raw/main/noobzvpns.zip
