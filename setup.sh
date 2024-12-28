@@ -2037,5 +2037,4 @@ sleep 1
 echo " Auto reboot in 10 Seconds "
 sleep 10
 rm -rf setup.sh
->>>>>>> cb1017802adba2524dfe2fdfaa306813b9810e00
 reboot
