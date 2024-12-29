@@ -1010,5 +1010,5 @@ echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 echo "ThanksYou For Using User058 Script"
-sleep 1
-menu
+sleep 5
+reboot
