@@ -961,6 +961,7 @@ rm -rf /root/*.sh
 rm -rf /root/LICENSE
 rm -rf /root/README.md
 rm -rf /root/domain
+rm -rf setup.sh
 #sudo hostnamectl set-hostname $user
 secs_to_human "$(($(date +%s) - ${start}))"
 sudo hostnamectl set-hostname $username
@@ -1012,4 +1013,3 @@ echo "ThanksYou For Using User058 Script"
 sleep 1
 echo " Auto reboot in 10 Seconds "
 sleep 10
-rm -rf setup.sh
