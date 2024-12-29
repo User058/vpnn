@@ -2029,12 +2029,11 @@ echo ""
 echo "------------------------------------------------------------"
 echo ""
 echo "===============-[ SCRIPT BY USER058 ]-==============="
-echo -e ""
-echo ""
+echo " "
 echo "" | tee -a log-install.txt
-echo "ThanksYou For Using User058 Script"
-sleep 1
-echo " Auto reboot in 10 Seconds "
-sleep 10
-rm -rf setup.sh
+echo -e ""
+sudo hostnamectl set-hostname $username
+echo -e "${green} Script Successfull Installed"
+echo ""
+read -p "$( echo -e "Press ${YELLOW}[ ${NC}${YELLOW}Enter${NC} ${YELLOW}]${NC} For Reboot") "
 reboot
