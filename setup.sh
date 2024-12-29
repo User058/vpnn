@@ -1011,5 +1011,4 @@ echo ""
 echo "" | tee -a log-install.txt
 echo "ThanksYou For Using User058 Script"
 sleep 1
-echo " Auto reboot in 10 Seconds "
-sleep 10
+menu
