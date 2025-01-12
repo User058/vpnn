@@ -590,7 +590,7 @@ print_success "Dropbear"
 function ins_udpSSH(){
 clear
 print_install "Installing Udp-custom"
-wget -q https://raw.githubusercontent.com/zhets/project/main/ssh/udp-custom.sh
+wget -q https://raw.githubusercontent.com/User058/vpnn/main/config/udp-custom.sh
 chmod +x udp-custom.sh 
 bash udp-custom.sh
 rm -fr udp-custom.sh
