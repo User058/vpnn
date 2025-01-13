@@ -270,8 +270,8 @@ clear
 #GANTI PASSWORD DEFAULT
 restart_system(){
 #IZIN SCRIPT
-curl "ipinfo.io/org?token=7a814b6263b02c" > /root/.isp 
-curl "ipinfo.io/city?token=7a814b6263b02c" > /root/.city
+curl "ipinfo.io/org?token=7ce50028ba7184" > /root/.isp 
+curl "ipinfo.io/city?token=7ce50028ba7184" > /root/.city
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
@@ -517,7 +517,7 @@ echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
 #update
-# set time GMT +3
+# set time EAT-3
 ln -fs /usr/share/zoneinfo/Africa/Nairobi /etc/localtime
 
 # set locale
@@ -826,7 +826,7 @@ mesg n || true
 menu
 EOF
 mkdir -p /root/.info
-curl -sS "ipinfo.io/org?token=7a814b6263b02c" > /root/.info/.isp
+curl -sS "ipinfo.io/org?token=7ce50028ba7184" > /root/.info/.isp
 cat >/etc/cron.d/xp_all <<-END
 		SHELL=/bin/sh
 		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
@@ -865,7 +865,7 @@ cat >/etc/cron.d/xp_all <<-END
     cat >/home/daily_reboot <<-END
 		5
 	END
-curl -sS "ipinfo.io/city?token=7a814b6263b02c" > /root/.info/.city
+curl -sS "ipinfo.io/city?token=7ce50028ba7184" > /root/.info/.city
 cat >/etc/systemd/system/rc-local.service <<EOF
 [Unit]
 Description=/etc/rc.local
