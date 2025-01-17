@@ -238,11 +238,16 @@ function base_package() {
 clear
 # Fungsi input domain
 function pasang_domain() {
+read -p "   Please select numbers 1-2 or Any Button(Random) : " host
+echo ""
+if [[ $host == "1" ]]; then
 echo -e "   \e[1;32mPlease Enter Your Subdomain $NC"
 read -p "   Subdomain: " host1
 echo "IP=" >> /var/lib/kyt/ipvps.conf
 echo $host1 > /etc/xray/domain
 echo $host1 > /root/domain
+echo ""
+elif [[ $host == "2" ]]; then
 #install cf
 wget ${REPO}files/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
