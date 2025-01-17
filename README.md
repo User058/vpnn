@@ -1,2 +1,2 @@
 ### COPY TO SERVER TO INSTALL SCRIPT
-<pre><code>wget -O setup.sh https://raw.githubusercontent.com/User058/vpnn/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
+<pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q setup.sh https://raw.githubusercontent.com/User058/vpnn/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
