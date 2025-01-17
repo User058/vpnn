@@ -29,6 +29,9 @@ ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 clear
@@ -187,6 +190,14 @@ function base_package() {
 clear
 # Fungsi input domain
 function pasang_domain() {
+echo -e ""
+clear
+     echo -e "   .----------------------------------."
+echo -e "   |\e[1;32mPlease Select a Domain Type Below \e[0m|"
+echo -e "   '----------------------------------'"
+echo -e "     \e[1;32m1)\e[0m Use Your Own Domain"
+echo -e "     \e[1;32m2)\e[0m Use Script Domain"
+echo -e "   ------------------------------------"
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
